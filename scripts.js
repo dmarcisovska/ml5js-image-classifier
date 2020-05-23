@@ -1,4 +1,3 @@
-const { ml5 } = window;
 const classifier = ml5.imageClassifier("MobileNet", modelLoaded);
 
 function modelLoaded() {
@@ -6,9 +5,9 @@ function modelLoaded() {
 }
 
 const image = document.querySelector(".image");
-let item = document.getElementById("item");
-let confidence = document.getElementById("confidence");
-let gallery = document.getElementById("gallery");
+const item = document.getElementById("item");
+const confidence = document.getElementById("confidence");
+const gallery = document.getElementById("gallery");
 
 async function classifyImage() {
     const results = await classifier.classify(image);
