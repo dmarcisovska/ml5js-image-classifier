@@ -1,5 +1,9 @@
 const { ml5 } = window;
-const classifier = ml5.imageClassifier("MobileNet", console.log);
+const classifier = ml5.imageClassifier("MobileNet", modelLoaded);
+
+function modelLoaded() {
+    console.log('Model Loaded!');
+}
 
 const image = document.querySelector(".image");
 let item = document.getElementById("item");
